@@ -4,7 +4,7 @@ puppet-wget
 A puppet module for download files with wget.
 
 ## Sample Usage
-Download with default parameters
+Download with default parameters:
 ```puppet
 node default {
 	wget {
@@ -14,7 +14,7 @@ node default {
 }
 ```
 
-Download with timeout parameter
+Download with timeout parameter:
 ```puppet
 node default {
 	wget {
@@ -25,7 +25,7 @@ node default {
 }
 ```
 
-Download with user owner and group of file
+Download with user owner and group of file:
 ```puppet
 node default {
 	wget {
@@ -37,7 +37,7 @@ node default {
 }
 ```
 
-Download and overwrite the file
+Download and overwrite the file:
 ```puppet
 node default {
 	wget {
