@@ -4,54 +4,46 @@ puppet-wget
 A puppet module for download files with wget.
 
 ## Sample Usage
-Install VIM and use the provided configuration defaults
+Download with default parameters
 ```
 node default {
-	class {'vim':}
-}
-```
-or
-```
-node default {
-	include vim
-}
-```
-
-With params
-```
-node default {
-	class {'vim':
-		tabstop  => 4,
-		encoding => 'utf-8',
+	wget {
+		source      => 'http://foo.com/bar.zip',
+		destination => '/tmp',
 	}
 }
 ```
 
-With params and plugins
+Download with timeout parameter
 ```
 node default {
-	class {'vim':
-		tabstop => 4,
-		plugins => ['puppet','rails'],
+	wget {
+		source      => 'http://foo.com/bar.zip',
+		destination => '/tmp',
+		timeout     => 30,
 	}
 }
 ```
 
-With other params
+Download with user owner and group of file
 ```
 node default {
-	class {'vim':
-		tabstop  => 4,
-		opt_misc => ['nonumber','wrap'],
+	wget {
+		source      => 'http://foo.com/bar.zip',
+		destination => '/tmp',
+		owner       => 'www-data',
+		group       => 'admin',
 	}
 }
 ```
 
-Uninstall vim
+Download and overwrite the file
 ```
 node default {
-	class {'vim':
-		ensure => absent,
+	wget {
+		source      => 'http://foo.com/bar.zip',
+		destination => '/tmp',
+		overwrite   => true,
 	}
 }
 ```
@@ -65,4 +57,4 @@ Principal developer:
 Support
 -------
 
-Please log tickets and issues at our [Projects site](https://github.com/leonardothibes/puppet-vim/issues)
+Please log tickets and issues at our [Projects site](https://github.com/leonardothibes/puppet-wget/issues)
