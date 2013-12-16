@@ -5,7 +5,7 @@ A puppet module for download files with wget.
 
 ## Sample Usage
 Download with default parameters
-```
+```puppet
 node default {
 	wget {
 		source      => 'http://foo.com/bar.zip',
@@ -15,7 +15,7 @@ node default {
 ```
 
 Download with timeout parameter
-```
+```puppet
 node default {
 	wget {
 		source      => 'http://foo.com/bar.zip',
@@ -26,7 +26,7 @@ node default {
 ```
 
 Download with user owner and group of file
-```
+```puppet
 node default {
 	wget {
 		source      => 'http://foo.com/bar.zip',
@@ -38,7 +38,7 @@ node default {
 ```
 
 Download and overwrite the file
-```
+```puppet
 node default {
 	wget {
 		source      => 'http://foo.com/bar.zip',
