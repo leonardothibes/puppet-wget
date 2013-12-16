@@ -8,4 +8,6 @@
 #
 # Learn more about module testing here: http://docs.puppetlabs.com/guides/tests_smoke.html
 #
-include wget
+wget::fetch {"https://www.google.com.br":
+	destination => '/tmp/google.html',
+}
