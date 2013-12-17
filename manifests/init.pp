@@ -3,9 +3,7 @@ class wget
 	define fetch(
 		$source      = $title,
 		$destination = '/tmp/download.wget',
-		$timeout     = '30',
-		$owner       = 'root',
-		$group       = 'root',
+		$timeout     = '0',
 		$nocheckcert = false,
 	) {
 		include wget::dependencies
@@ -13,9 +11,9 @@ class wget
 			true  => '--no-check-certificate ',
 			false => '',
 		}
-		$command = "wget ${nocheckcmd}${source} -O ${destination}"
 		exec {"wget-${source}":
-			command => $command,
+			command => "wget ${nocheckcmd}${source} -O ${destination}",
+		    timeout => $timeout,
 			path    => '/usr/bin',
 			require => Package['wget'],
 		}
