@@ -7,7 +7,7 @@ A puppet module for download files with wget.
 Download with default parameters:
 ```puppet
 node default {
-	wget {
+	wget::fetch {
 		source      => 'http://foo.com/bar.zip',
 		destination => '/tmp',
 	}
@@ -17,7 +17,7 @@ node default {
 Download with timeout parameter:
 ```puppet
 node default {
-	wget {
+	wget::fetch {
 		source      => 'http://foo.com/bar.zip',
 		destination => '/tmp',
 		timeout     => 30,
