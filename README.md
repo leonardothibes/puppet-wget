@@ -25,29 +25,6 @@ node default {
 }
 ```
 
-Download with user owner and group of file:
-```puppet
-node default {
-	wget {
-		source      => 'http://foo.com/bar.zip',
-		destination => '/tmp',
-		owner       => 'www-data',
-		group       => 'admin',
-	}
-}
-```
-
-Download and overwrite the file:
-```puppet
-node default {
-	wget {
-		source      => 'http://foo.com/bar.zip',
-		destination => '/tmp',
-		overwrite   => true,
-	}
-}
-```
-
 Contact
 -------
 
