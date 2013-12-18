@@ -8,6 +8,6 @@
 #
 # Learn more about module testing here: http://docs.puppetlabs.com/guides/tests_smoke.html
 #
-wget::fetch {"https://www.google.com.br":
-	destination => '/tmp/google.html',
+wget::fetch {"https://packages.zendframework.com/releases/ZendFramework-1.12.3/ZendFramework-1.12.3.tar.gz":
+	destination => '/tmp/zf.tar.gz',
 }

@@ -16,6 +16,7 @@ class wget
 		    timeout => $timeout,
 			path    => '/usr/bin',
 			require => Package['wget'],
+			onlyif  => "test ! -f ${destination}",
 		}
 	}
 }
