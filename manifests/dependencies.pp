@@ -1,3 +1,5 @@
 class wget::dependencies {
-	package {'wget': ensure => present}
+	if !defined(Package['wget']) {
+		package {'wget': ensure => present}
+	}
 }
