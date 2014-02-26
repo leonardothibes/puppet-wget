@@ -4,6 +4,7 @@
  Leonardo Thibes <eu@leonardothibes.com> (1):
   * Implementando chmod apos o download #1
   * Implementando chmod e chgrp apos o download #2
+  * Incluindo mais exemplos de uso no README.md
 
 2014-01-13 Leonardo Thibes <eu@leonardothibes.com> - 1.0.3
 ==========================================================
