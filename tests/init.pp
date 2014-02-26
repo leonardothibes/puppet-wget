@@ -11,5 +11,7 @@
 $source = "https://packages.zendframework.com/releases/ZendFramework-1.12.3/ZendFramework-1.12.3.tar.gz"
 wget::fetch {$source:
 	destination => '/tmp/zf.tar.gz',
-	chmod       => 0644,
+	chmod       => '0644',
+	owner       => 'vagrant',
+	group       => 'admin',
 }
