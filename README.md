@@ -25,6 +25,19 @@ node default {
 }
 ```
 
+Download with permission parameters:
+```puppet
+node default {
+	wget::fetch {
+		source      => 'http://foo.com/bar.zip',
+		destination => '/tmp',
+		owner       => 'root',
+		group       => 'admin',
+		chmod       => '0644',
+	}
+}
+```
+
 Contact
 -------
 
