@@ -1,6 +1,6 @@
 name    'leonardothibes-wget'
 author  'leonardothibes'
-version '1.0.3'
+version '1.0.4'
 license 'MIT'
 summary 'A puppet module for download files with wget'
 description 'A puppet module for download files with wget'
